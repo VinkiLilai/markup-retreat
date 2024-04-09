@@ -1,1 +1,33 @@
-/* Пиши стили тут */
+.rating {
+    overflow: hidden;
+    width: 265px;
+    margin: 0 auto;
+}
+.rating input {
+    display: none;
+}
+.rating label {
+    float: right;
+    width: 42px;
+    cursor: pointer;
+    font-size: 48px;
+    line-height: 32px;
+    color: lightgrey;
+}
+.rating label:before {
+    content: '★';
+}
+.rating input:checked ~ label {
+    color: gold;
+}
+.rating label:hover,
+.rating label:hover ~ label {
+    color: gold;
+}
+.rating input:checked + label:hover,
+.rating input:checked + label:hover ~ label,
+.rating input:checked ~ label:hover,
+.rating input:checked ~ label:hover ~ label,
+.rating label:hover ~ input:checked ~ label {
+    color: gold;
+}
